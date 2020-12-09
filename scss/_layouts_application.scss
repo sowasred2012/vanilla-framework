@@ -89,6 +89,7 @@ $application-layout--side-nav-width-expanded: 15rem !default;
       width: $application-layout--side-nav-width-collapsed;
 
       &.is-collapsed {
+        overflow: hidden;
         transform: translateX(0);
         width: $application-layout--side-nav-width-collapsed;
       }
@@ -96,12 +97,14 @@ $application-layout--side-nav-width-expanded: 15rem !default;
 
     .l-navigation:hover {
       box-shadow: $panel-drop-shadow;
+      overflow-y: scroll;
       width: $application-layout--side-nav-width-expanded;
     }
 
     .l-navigation.is-pinned {
       box-shadow: $panel-drop-shadow-transparent;
       grid-area: nav;
+      overflow-y: scroll;
       position: static;
       width: $application-layout--side-nav-width-expanded;
     }
